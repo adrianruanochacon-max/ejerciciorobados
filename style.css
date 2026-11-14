@@ -1,0 +1,174 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #111010;
+    padding: 20px;
+    
+}
+
+/* 1. ENCABEZADO */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #cccccc;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #333333;
+}
+
+/* 2. BANNER PRINCIPAL */
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.texto-banner {
+    width: 45%;
+}
+
+.texto-banner h1 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.texto-banner p {
+    margin-bottom: 20px;
+}
+
+.boton {
+    padding: 10px 20px;
+    background-color: #555555;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.imagen-banner {
+    width: 48%;
+    height: 250px;
+    background-color: #cccccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 3. PRODUCTOS DESTACADOS */
+.seccion-productos {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.seccion-productos h2 {
+    margin-bottom: 20px;
+}
+
+.contenedor-productos {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.tarjeta-producto {
+    width: 22%; /* 4 productos por fila */
+    margin-bottom: 15px;
+}
+
+.caja-imagen {
+    height: 180px;
+    background-color: #cccccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.boton-comprar {
+    width: 100%;
+    padding: 8px;
+    background-color: #e0e0e0;
+    border: 1px solid #cccccc;
+    cursor: pointer;
+}
+
+/* 4. OPINIONES */
+.seccion-opiniones {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.seccion-opiniones h2 {
+    margin-bottom: 20px;
+}
+
+.contenedor-opiniones {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.opinion {
+    width: 22%;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #eeeeee;
+}
+
+/* 5. PIE DE PÁGINA */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #666666;
+    color: white;
+    padding: 30px 20px;
+    margin-top: 40px;
+}
+
+/* RESPONSIVIDAD SENCILLA */
+
+/* TABLETA (768px o menos) */
+@media (max-width: 768px) {
+    .banner {
+        flex-direction: column;
+    }
+
+    .texto-banner, .imagen-banner {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .tarjeta-producto, .opinion {
+        width: 48%; /* Pasan a 2 columnas */
+    }
+}
+
+/* CELULAR (480px o menos) */
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .tarjeta-producto, .opinion {
+        width: 100%; /* Pasan a 1 columna */
+    }
+}
